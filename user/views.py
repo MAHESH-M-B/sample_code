@@ -19,7 +19,7 @@ def SignUp(request):
             user = User.objects.create_user(uname, email, password1)
             user.save()
             return redirect('SignIn')
-    return render(request, 'user/SignUp.html')
+    return render(request, 'user/signup.html')
 
 
 def SignIn(request):
@@ -32,4 +32,4 @@ def SignIn(request):
             return redirect('form')
         else:
             return HttpResponse('username or password is not correct')
-    return render(request, 'user/SignIn.html')
+    return render(request, 'user/signin.html')
